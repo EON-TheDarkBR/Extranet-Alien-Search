@@ -2,8 +2,8 @@
 // BIOLOGICAL STRUCTURE SYSTEM
 // ==========================================
 
-// null = todas as estruturas
-let currentStructure = null;
+// [] = todas as estruturas
+let currentStructure = [];
 
 
 // ==========================================
@@ -31,20 +31,22 @@ const structures = [
 // CHECK IF ALIEN HAS STRUCTURE
 // ==========================================
 
-function alienHasStructure(alien, structure) {
+function alienHasStructure(alien, structures) {
 
   // Nenhuma estrutura selecionada
-  if (structure === null) {
+  if (structures.length === 0) {
     return true;
   }
 
-  const selected =
-    structure.toUpperCase();
+  const alienStructures = [
+    alien.body1,
+    alien.body2,
+    alien.body3
+  ];
 
-  return (
-    alien.body1 === selected ||
-    alien.body2 === selected ||
-    alien.body3 === selected
+  // O alien precisa possuir TODAS as estruturas selecionadas
+  return structures.every(structure =>
+    alienStructures.includes(structure.toUpperCase())
   );
 }
 
@@ -54,14 +56,6 @@ function alienHasStructure(alien, structure) {
 // ==========================================
 
 function createStructureMenu() {
-
-  const searchBar =
-    document.getElementById("searchInput");
-
-
-  // ==========================================
-  // CONTAINER
-  // ==========================================
 
   const container =
     document.createElement("div");
@@ -113,7 +107,13 @@ function createStructureMenu() {
   allOption.onclick =
     function() {
 
-      currentStructure = null;
+      // Remove todas as estruturas selecionadas
+      currentStructure = [];
+
+      // Remove o toggle de todas as opções
+      menu.querySelectorAll(".structureOption").forEach(option => {
+        option.classList.remove("selected");
+      });
 
       menu.classList.remove("open");
 
@@ -146,13 +146,46 @@ function createStructureMenu() {
       option.onclick =
         function() {
 
-          currentStructure =
-            structure;
+          const value =
+            structure.toUpperCase();
 
-          menu.classList.remove(
-            "open"
-          );
 
+          // ==========================================
+          // REMOVE
+          // ==========================================
+
+          if (currentStructure.includes(value)) {
+
+            currentStructure =
+              currentStructure.filter(
+                s => s !== value
+              );
+
+            option.classList.remove(
+              "selected"
+            );
+
+          }
+
+
+          // ==========================================
+          // ADD
+          // ==========================================
+
+          else {
+
+            currentStructure.push(
+              value
+            );
+
+            option.classList.add(
+              "selected"
+            );
+
+          }
+
+
+          // Atualiza resultados
           searchAlien();
 
         };

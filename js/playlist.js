@@ -37,9 +37,6 @@ function alienBelongsToPlaylist(alien, playlistIndex) {
 
 function createPlaylistMenu() {
 
-  const searchBar = document.getElementById("searchInput");
-
-  // Container
   const container = document.createElement("div");
   container.id = "playlistContainer";
 
@@ -51,6 +48,7 @@ function createPlaylistMenu() {
   // Menu
   const menu = document.createElement("div");
   menu.id = "playlistMenu";
+
 
   // ==========================================
   // ALL
@@ -64,6 +62,14 @@ function createPlaylistMenu() {
   allOption.onclick = function() {
 
     currentPlaylist = null;
+
+    // Remove seleção de todas
+    menu.querySelectorAll(".playlistOption").forEach(opt => {
+      opt.classList.remove("selected");
+    });
+
+    // Seleciona All
+    allOption.classList.add("selected");
 
     menu.classList.remove("open");
 
@@ -86,7 +92,16 @@ function createPlaylistMenu() {
 
     option.onclick = function() {
 
+      // Define a playlist atual
       currentPlaylist = index;
+
+      // Remove seleção das outras
+      menu.querySelectorAll(".playlistOption").forEach(opt => {
+        opt.classList.remove("selected");
+      });
+
+      // Seleciona esta playlist
+      option.classList.add("selected");
 
       menu.classList.remove("open");
 

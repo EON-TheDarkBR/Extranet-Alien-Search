@@ -2,8 +2,8 @@
 // ELEMENTAL AFFINITY SYSTEM
 // ==========================================
 
-// null = todas as afinidades
-let currentAffinity = null;
+// [] = todas as afinidades
+let currentAffinity = [];
 
 
 // Lista de afinidades
@@ -22,26 +22,27 @@ const affinities = [
 
 
 // ==========================================
-// CHECK IF ALIEN HAS THE SELECTED AFFINITY
+// CHECK IF ALIEN HAS THE SELECTED AFFINITIES
 // ==========================================
 
-function alienHasAffinity(alien, affinity) {
+function alienHasAffinity(alien, affinities) {
 
   // Nenhuma afinidade selecionada
-  if (affinity === null) {
+  if (affinities.length === 0) {
     return true;
   }
 
-  // Converte para maiúsculo porque o aliens.js usa
-  // FIRE, ELECTRIC, ENERGY, etc.
-  const selectedAffinity = affinity.toUpperCase();
-
-  return [
+  const alienAffinities = [
     alien.ele1,
     alien.ele2,
     alien.ele3,
     alien.ele4
-  ].includes(selectedAffinity);
+  ];
+
+  // Precisa possuir TODAS as afinidades selecionadas
+  return affinities.every(affinity =>
+    alienAffinities.includes(affinity.toUpperCase())
+  );
 }
 
 
@@ -75,7 +76,11 @@ function createAffinityMenu() {
 
   allOption.onclick = function() {
 
-    currentAffinity = null;
+    currentAffinity = [];
+
+    menu.querySelectorAll(".affinityOption").forEach(option => {
+      option.classList.remove("selected");
+    });
 
     menu.classList.remove("open");
 
@@ -98,11 +103,29 @@ function createAffinityMenu() {
 
     option.onclick = function() {
 
-      currentAffinity = affinity;
+      const value = affinity.toUpperCase();
 
-      menu.classList.remove("open");
+      // Remove
+      if (currentAffinity.includes(value)) {
+
+        currentAffinity =
+          currentAffinity.filter(a => a !== value);
+
+        option.classList.remove("selected");
+
+      }
+
+      // Add
+      else {
+
+        currentAffinity.push(value);
+
+        option.classList.add("selected");
+
+      }
 
       searchAlien();
+
     };
 
     menu.appendChild(option);

@@ -564,3 +564,40 @@ body {
 .structureOption:active {
   transform: scale(0.97);
 }
+.affinityOption.selected {
+  background-color: #82A9C3;
+  color: white;
+  font-weight: bold;
+}
+.playlistOption {
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.playlistOption:hover {
+  background-color: #82A9C3;
+  color: white;
+}
+
+.playlistOption.selected {
+  background-color: #82A9C3;
+  color: white;
+  font-weight: bold;
+}
+.structureOption {
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.structureOption:hover {
+  background-color: #82A9C3;
+  color: white;
+}
+
+.structureOption.selected {
+  background-color: #82A9C3;
+  color: white;
+  font-weight: bold;
+}

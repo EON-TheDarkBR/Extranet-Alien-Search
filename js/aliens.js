@@ -86,9 +86,9 @@ const aliens = [
 
   {id: 1043, name: "TERASPIN", display: "Teraspin", portrait: "Portraits/Teraspin.png", availability: [0, 0, 1, 1],body1:"ORGANIC",body2:"NONE",body3:"NONE",ele1:"WIND",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[70,40,40,40]},
 
-  {id: 1044, name: "NRG", display: "NRG", portrait: "Portraits/NRG.png", availability: [0, 0, 1, 1],body1:"RADIOACTIVE",body2:"MECHANICAL",body3:"NONE",ele1:"RADIOACTIVE",ele2:"NONE",ele3:"NONE",ele4:"NONE",stats:[110,40,70,10]},
+  {id: 1044, name: "NRG", display: "NRG", portrait: "Portraits/NRG.png", availability: [0, 0, 1, 1],body1:"RADIOACTIVE",body2:"MECHANICAL",body3:"NONE",ele1:"RADIOACTIVE",ele2:"FIRE",ele3:"NONE",ele4:"NONE",stats:[110,40,70,10]},
 
-  {id: 1045, name: "NRG (TRUE FORM)", display: "NRG (True Form)", portrait: "Portraits/NRG_NO_SUIT.png", availability: [0, 0, 1, 1],body1:"RADIOACTIVE",body2:"NONE",body3:"NONE",ele1:"RADIOACTIVE",ele2:"NONE",ele3:"NONE",ele4:"NONE",stats:[50,20,70,60]},
+  {id: 1045, name: "NRG (TRUE FORM)", display: "NRG (True Form)", portrait: "Portraits/NRG_NO_SUIT.png", availability: [0, 0, 1, 1],body1:"RADIOACTIVE",body2:"NONE",body3:"NONE",ele1:"RADIOACTIVE",ele2:"FIRE",ele3:"NONE",ele4:"NONE",stats:[50,20,70,60]},
 
   {id: 1046, name: "FASTTRACK", display: "Fasttrack", portrait: "Portraits/FASTTRACK.png", availability: [0, 0, 1, 1],body1:"ORGANIC",body2:"NONE",body3:"NONE",ele1:"NONE",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[30,30,0,70]},
 
