@@ -30,6 +30,8 @@ window.addEventListener(
 
     createStructureMenu();
 
+    createSortMenu();
+
     searchAlien();
 
   }
