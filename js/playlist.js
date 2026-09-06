@@ -3,15 +3,21 @@
 // ==========================================
 
 // null = todas as playlists
+// array = playlists selecionadas
 let currentPlaylist = null;
 
 
-// Nomes das playlists
+// ==========================================
+// PLAYLIST NAMES
+// ==========================================
+
 const playlists = [
   "Prototype",
   "Recalibrated",
   "Ultimatrix",
-  "Definitive"
+  "Definitive",
+  "Biomnitrix",
+  "Reboot"
 ];
 
 
@@ -19,15 +25,25 @@ const playlists = [
 // CHECK IF ALIEN BELONGS TO PLAYLIST
 // ==========================================
 
-function alienBelongsToPlaylist(alien, playlistIndex) {
+function alienBelongsToPlaylist(alien, selectedPlaylists) {
 
   // Nenhuma playlist selecionada
-  if (playlistIndex === null) {
+  if (
+    selectedPlaylists === null ||
+    selectedPlaylists.length === 0
+  ) {
     return true;
   }
 
-  // Verifica availability
-  return alien.availability[playlistIndex] === 1;
+
+  // Alien pertence a pelo menos uma
+  // das playlists selecionadas
+  return selectedPlaylists.some(function(index) {
+
+    return alien.availability[index] === 1;
+
+  });
+
 }
 
 
@@ -37,80 +53,205 @@ function alienBelongsToPlaylist(alien, playlistIndex) {
 
 function createPlaylistMenu() {
 
-  const container = document.createElement("div");
-  container.id = "playlistContainer";
+  const container =
+    document.createElement("div");
 
-  // Botão principal
-  const button = document.createElement("button");
-  button.id = "playlistButton";
-  button.innerText = "Playlist";
+  container.id =
+    "playlistContainer";
 
-  // Menu
-  const menu = document.createElement("div");
-  menu.id = "playlistMenu";
+
+  // ==========================================
+  // MAIN BUTTON
+  // ==========================================
+
+  const button =
+    document.createElement("button");
+
+  button.id =
+    "playlistButton";
+
+  button.innerText =
+    "Playlist";
+
+
+  // ==========================================
+  // MENU
+  // ==========================================
+
+  const menu =
+    document.createElement("div");
+
+  menu.id =
+    "playlistMenu";
 
 
   // ==========================================
   // ALL
   // ==========================================
 
-  const allOption = document.createElement("div");
+  const allOption =
+    document.createElement("div");
 
-  allOption.classList.add("playlistOption");
-  allOption.innerText = "All";
+  allOption.classList.add(
+    "playlistOption"
+  );
+
+  allOption.innerText =
+    "All";
+
 
   allOption.onclick = function() {
 
+    // Remove todas as playlists
     currentPlaylist = null;
 
+
     // Remove seleção de todas
-    menu.querySelectorAll(".playlistOption").forEach(opt => {
-      opt.classList.remove("selected");
-    });
+    menu
+      .querySelectorAll(".playlistOption")
+      .forEach(function(opt) {
+
+        opt.classList.remove(
+          "selected"
+        );
+
+      });
+
 
     // Seleciona All
-    allOption.classList.add("selected");
+    allOption.classList.add(
+      "selected"
+    );
 
-    menu.classList.remove("open");
 
     searchAlien();
+
   };
 
-  menu.appendChild(allOption);
+
+  menu.appendChild(
+    allOption
+  );
 
 
   // ==========================================
   // PLAYLISTS
   // ==========================================
 
-  playlists.forEach(function(playlist, index) {
+  playlists.forEach(
+    function(playlist, index) {
 
-    const option = document.createElement("div");
+      const option =
+        document.createElement("div");
 
-    option.classList.add("playlistOption");
-    option.innerText = playlist;
+      option.classList.add(
+        "playlistOption"
+      );
 
-    option.onclick = function() {
+      option.innerText =
+        playlist;
 
-      // Define a playlist atual
-      currentPlaylist = index;
 
-      // Remove seleção das outras
-      menu.querySelectorAll(".playlistOption").forEach(opt => {
-        opt.classList.remove("selected");
-      });
+      option.onclick = function() {
 
-      // Seleciona esta playlist
-      option.classList.add("selected");
+        // Se não existe nenhuma playlist
+        // selecionada, cria o array
+        if (currentPlaylist === null) {
 
-      menu.classList.remove("open");
+          currentPlaylist = [];
 
-      searchAlien();
-    };
+        }
 
-    menu.appendChild(option);
 
-  });
+        // ==========================================
+        // CHECK IF ALREADY SELECTED
+        // ==========================================
+
+        const alreadySelected =
+          currentPlaylist.includes(index);
+
+
+        // ==========================================
+        // REMOVE PLAYLIST
+        // ==========================================
+
+        if (alreadySelected) {
+
+          currentPlaylist =
+            currentPlaylist.filter(function(i) {
+
+              return i !== index;
+
+            });
+
+
+          option.classList.remove(
+            "selected"
+          );
+
+        }
+
+
+        // ==========================================
+        // ADD PLAYLIST
+        // ==========================================
+
+        else {
+
+          currentPlaylist.push(index);
+
+          option.classList.add(
+            "selected"
+          );
+
+        }
+
+
+        // ==========================================
+        // IF NOTHING SELECTED
+        // ==========================================
+
+        if (
+          currentPlaylist.length === 0
+        ) {
+
+          currentPlaylist = null;
+
+          allOption.classList.add(
+            "selected"
+          );
+
+        }
+
+
+        // ==========================================
+        // REMOVE ALL SELECTION
+        // ==========================================
+
+        else {
+
+          allOption.classList.remove(
+            "selected"
+          );
+
+        }
+
+
+        // NÃO FECHA O MENU
+        // para permitir selecionar várias
+
+
+        searchAlien();
+
+      };
+
+
+      menu.appendChild(
+        option
+      );
+
+    }
+  );
 
 
   // ==========================================
@@ -121,19 +262,32 @@ function createPlaylistMenu() {
 
     event.stopPropagation();
 
-    menu.classList.toggle("open");
+    menu.classList.toggle(
+      "open"
+    );
 
   };
 
 
-  // Impede o clique dentro do menu de fechar
+  // Impede o clique dentro do menu
+  // de fechar o menu
   menu.onclick = function(event) {
+
     event.stopPropagation();
+
   };
 
 
-  container.appendChild(button);
-  container.appendChild(menu);
+  container.appendChild(
+    button
+  );
 
-  document.body.appendChild(container);
+  container.appendChild(
+    menu
+  );
+
+  document.body.appendChild(
+    container
+  );
+
 }

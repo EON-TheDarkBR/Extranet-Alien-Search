@@ -191,13 +191,15 @@ function searchAlien() {
       "icons/OS_WATCH.png",
       "icons/AF_WATCH.png",
       "icons/UA_WATCH.png",
-      "icons/OV_WATCH.png"
+      "icons/OV_WATCH.png",
+      "icons/BIO_WATCH.png",
+      "icons/RB_WATCH.png"
 
     ];
 
 
     // Cria os 4 Omnitrix
-    for (let j = 0; j < 4; j++) {
+    for (let j = 0; j < 6; j++) {
 
       let icon =
         document.createElement("img");
