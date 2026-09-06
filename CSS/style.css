@@ -419,13 +419,9 @@ body {
 
 
 .sortOption.selected {
-
-  background: rgb(40, 235, 99);
-
-  color: rgb(0, 0, 0);
-
+  background: #82A9C3;
+  color: white;
   font-weight: bold;
-
 }
 
 
