@@ -164,7 +164,7 @@ const aliens = [
 
   {id: 1082, name: "WHAMPIRE", display: "Whampire", portrait: "Portraits/WHAMPIRE.png", availability: [0, 0, 0, 1, 0, 0, 0],body1:"ORGANIC",body2:"NONE",body3:"NONE",ele1:"NONE",ele2:"NONE",ele3:"NONE",ele4:"NONE",stats:[55,30,0,50]},
 
-  {id: 1083, name: "WHAMPIRE (BAT FORM)", display: "Whampire (Bat Form)", portrait: "Portraits/WHAMPIRE_BAT FORM.png", availability: [0, 0, 0, 1, 0, 0, 0],body1:"ORGANIC",body2:"NONE",body3:"NONE",ele1:"NONE",ele2:"NONE",ele3:"NONE",ele4:"NONE",stats:[10,0,0,40]},
+  {id: 1083, name: "WHAMPIRE (BAT FORM)", display: "Whampire (Bat Form)", portrait: "Portraits/WHAMPIRE_BAT FORM.png", availability: [0, 0, 0, 1, 0, 0, 0],body1:"ORGANIC",body2:"NONE",body3:"NONE",ele1:"NONE",ele2:"NONE",ele3:"NONE",ele4:"NONE",stats:[10,1,0,40]},
 
   {id: 1084, name: "ATOMIC-X (FUSION)", display: "Atomic-X (Fusion)", portrait: "Portraits/ATOMIC_X.png", availability: [0, 0, 0, 0, 1, 0, 0],body1:"MECHANICAL",body2:"COSMIC",body3:"RADIOACTIVE",ele1:"RADIOACTIVE",ele2:"NONE",ele3:"NONE",ele4:"NONE",stats:[85,85,90,110]},
 
@@ -186,7 +186,13 @@ const aliens = [
 
   {id: 1093, name: "OVERFLOW", display: "Overflow", portrait: "Portraits/OVERFLOW.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"WATER",body2:"MECHANICAL",body3:"NONE",ele1:"WATER",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[45,50,35,55]},
 
-  {id: 1094, name: "STINKFLY (REBOOT)", display: "Stinkfly (Reboot)", portrait: "Portraits/STINKFLY REBOOT.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"ORGANIC",body2:"NONE",body3:"NONE",ele1:"GAS",ele2:"WIND", ele3:"NONE",ele4:"NONE",stats:[40,35,30,50]}
+  {id: 1094, name: "STINKFLY (REBOOT)", display: "Stinkfly (Reboot)", portrait: "Portraits/STINKFLY REBOOT.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"ORGANIC",body2:"NONE",body3:"NONE",ele1:"GAS",ele2:"WIND", ele3:"NONE",ele4:"NONE",stats:[40,35,30,50]},
+
+  {id: 1095, name: "GREY ARMS (FUSION)", display: "Grey Arms (Fusion)", portrait: "Portraits/GREY ARMS.png", availability: [0, 0, 0, 0, 1, 0, 0],body1:"ORGANIC",body2:"NONE",body3:"NONE",ele1:"WIND",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[35,25,15,35]},
+
+  {id: 1096, name: "GAX", display: "Gax", portrait: "Portraits/GAX.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"ORGANIC",body2:"MECHANICAL",body3:"NONE",ele1:"ENERGY",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[90,60,30,50]},
+  
+  {id: 1097, name: "SHOCKROCK", display: "Shockrock", portrait: "Portraits/SHOCKROCK.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"ELECTRIC",body2:"MINERAL",body3:"NONE",ele1:"ELECTRIC",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[70,80,60,40]}
 
 
 ];
