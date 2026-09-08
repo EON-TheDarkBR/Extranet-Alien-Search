@@ -162,6 +162,15 @@ function searchAlien() {
     name.innerText =
       alien.display;
 
+    name.style.position =
+      "absolute";
+
+    name.style.left =
+      "0px";
+
+    name.style.top =
+      "0px";
+
     name.style.fontSize =
       "23px";
 
@@ -179,11 +188,20 @@ function searchAlien() {
     watches.style.gap =
       "10px";
 
-    watches.style.marginTop =
+    watches.style.position =
+      "absolute";
+
+    watches.style.left =
+      "100px";
+
+    watches.style.top =
       "50px";
 
+    watches.style.marginTop =
+      "0px";
+
     watches.style.marginLeft =
-      "120px";
+      "0px";
 
 
     let watchIcons = [
@@ -198,7 +216,7 @@ function searchAlien() {
     ];
 
 
-    // Cria os 4 Omnitrix
+    // Cria os Omnitrix
     for (let j = 0; j < 6; j++) {
 
       let icon =
@@ -242,202 +260,46 @@ function searchAlien() {
     }
 
 
-// ==========================================
-// BIOLOGICAL STRUCTURE
-// ==========================================
+    // ==========================================
+    // BIOLOGICAL STRUCTURE
+    // ==========================================
 
-let elementsList = [
+    let elementsList = [
 
-  alien.body1,
-  alien.body2,
-  alien.body3,
-  alien.body4
+      alien.body1,
+      alien.body2,
+      alien.body3,
+      alien.body4
 
-].filter(
-  e => e && e.trim().toUpperCase() !== "NONE"
-);
+    ].filter(
+      e => e && e.trim().toUpperCase() !== "NONE"
+    );
 
 
-let elementsContainer =
-  document.createElement("div");
-
-elementsContainer.style.display =
-  "flex";
-
-elementsContainer.style.flexDirection =
-  "column";
-
-elementsContainer.style.marginTop =
-  "5px";
-
-elementsContainer.style.marginLeft =
-  "350px";
-
-
-// ==========================================
-// 1 ELEMENT
-// ==========================================
-
-if (elementsList.length === 1) {
-
-  let row =
-    document.createElement("div");
-
-
-  let icon =
-    document.createElement("img");
-
-  icon.src =
-    "elements/" +
-    elementsList[0] +
-    ".png";
-
-  icon.style.height =
-    "30px";
-
-
-  row.appendChild(icon);
-
-  elementsContainer.appendChild(row);
-
-}
-
-
-// ==========================================
-// 2 ELEMENTS
-// ==========================================
-
-if (elementsList.length === 2) {
-
-  let row =
-    document.createElement("div");
-
-  row.style.display =
-    "flex";
-
-  row.style.gap =
-    "10px";
-
-
-  elementsList.forEach(el => {
-
-    let icon =
-      document.createElement("img");
-
-    icon.src =
-      "elements/" +
-      el +
-      ".png";
-
-    icon.style.height =
-      "30px";
-
-
-    row.appendChild(icon);
-
-  });
-
-
-  elementsContainer.appendChild(row);
-
-}
-
-
-// ==========================================
-// 3 ELEMENTS
-// ==========================================
-
-if (elementsList.length === 3) {
-
-  // Linha superior
-  let topRow =
-    document.createElement("div");
-
-  topRow.style.display =
-    "flex";
-
-  topRow.style.gap =
-    "10px";
-
-
-  for (let k = 0; k < 2; k++) {
-
-    let icon =
-      document.createElement("img");
-
-    icon.src =
-      "elements/" +
-      elementsList[k] +
-      ".png";
-
-    icon.style.height =
-      "30px";
-
-
-    topRow.appendChild(icon);
-
-  }
-
-
-  // Linha inferior
-  let bottomRow =
-    document.createElement("div");
-
-  bottomRow.style.marginTop =
-    "5px";
-
-
-  let icon =
-    document.createElement("img");
-
-  icon.src =
-    "elements/" +
-    elementsList[2] +
-    ".png";
-
-  icon.style.height =
-    "30px";
-
-
-  bottomRow.appendChild(icon);
-
-
-  elementsContainer.appendChild(
-    topRow
-  );
-
-  elementsContainer.appendChild(
-    bottomRow
-  );
-
-}
-
-
-// ==========================================
-// 4 ELEMENTS
-// ==========================================
-
-if (elementsList.length === 4) {
-
-  for (let r = 0; r < 2; r++) {
-
-    let row =
+    let elementsContainer =
       document.createElement("div");
 
-    row.style.display =
+    elementsContainer.style.display =
       "flex";
 
-    row.style.gap =
-      "10px";
+    elementsContainer.style.flexDirection =
+      "column";
 
-    row.style.marginTop =
+    elementsContainer.style.marginTop =
       "5px";
 
+    elementsContainer.style.marginLeft =
+      "350px";
 
-    for (let c = 0; c < 2; c++) {
 
-      let index =
-        r * 2 + c;
+    // ==========================================
+    // 1 ELEMENT
+    // ==========================================
+
+    if (elementsList.length === 1) {
+
+      let row =
+        document.createElement("div");
 
 
       let icon =
@@ -445,7 +307,7 @@ if (elementsList.length === 4) {
 
       icon.src =
         "elements/" +
-        elementsList[index] +
+        elementsList[0] +
         ".png";
 
       icon.style.height =
@@ -454,14 +316,170 @@ if (elementsList.length === 4) {
 
       row.appendChild(icon);
 
+      elementsContainer.appendChild(row);
+
     }
 
 
-    elementsContainer.appendChild(row);
+    // ==========================================
+    // 2 ELEMENTS
+    // ==========================================
 
-  }
+    if (elementsList.length === 2) {
 
-}
+      let row =
+        document.createElement("div");
+
+      row.style.display =
+        "flex";
+
+      row.style.gap =
+        "10px";
+
+
+      elementsList.forEach(el => {
+
+        let icon =
+          document.createElement("img");
+
+        icon.src =
+          "elements/" +
+          el +
+          ".png";
+
+        icon.style.height =
+          "30px";
+
+
+        row.appendChild(icon);
+
+      });
+
+
+      elementsContainer.appendChild(row);
+
+    }
+
+
+    // ==========================================
+    // 3 ELEMENTS
+    // ==========================================
+
+    if (elementsList.length === 3) {
+
+      // Linha superior
+      let topRow =
+        document.createElement("div");
+
+      topRow.style.display =
+        "flex";
+
+      topRow.style.gap =
+        "10px";
+
+
+      for (let k = 0; k < 2; k++) {
+
+        let icon =
+          document.createElement("img");
+
+        icon.src =
+          "elements/" +
+          elementsList[k] +
+          ".png";
+
+        icon.style.height =
+          "30px";
+
+
+        topRow.appendChild(icon);
+
+      }
+
+
+      // Linha inferior
+      let bottomRow =
+        document.createElement("div");
+
+      bottomRow.style.marginTop =
+        "5px";
+
+
+      let icon =
+        document.createElement("img");
+
+      icon.src =
+        "elements/" +
+        elementsList[2] +
+        ".png";
+
+      icon.style.height =
+        "30px";
+
+
+      bottomRow.appendChild(icon);
+
+
+      elementsContainer.appendChild(
+        topRow
+      );
+
+      elementsContainer.appendChild(
+        bottomRow
+      );
+
+    }
+
+
+    // ==========================================
+    // 4 ELEMENTS
+    // ==========================================
+
+    if (elementsList.length === 4) {
+
+      for (let r = 0; r < 2; r++) {
+
+        let row =
+          document.createElement("div");
+
+        row.style.display =
+          "flex";
+
+        row.style.gap =
+          "10px";
+
+        row.style.marginTop =
+          "5px";
+
+
+        for (let c = 0; c < 2; c++) {
+
+          let index =
+            r * 2 + c;
+
+
+          let icon =
+            document.createElement("img");
+
+          icon.src =
+            "elements/" +
+            elementsList[index] +
+            ".png";
+
+          icon.style.height =
+            "30px";
+
+
+          row.appendChild(icon);
+
+        }
+
+
+        elementsContainer.appendChild(row);
+
+      }
+
+    }
 
 
     // ==========================================
@@ -481,7 +499,7 @@ if (elementsList.length === 4) {
       "bold";
 
     bioTitle.style.marginTop =
-      "-106px";
+      "-35px";
 
     bioTitle.style.marginLeft =
       "350px";
@@ -729,6 +747,25 @@ if (elementsList.length === 4) {
     info.style.flexDirection =
       "column";
 
+    // ==========================================
+    // ALTURA FIXA IGUAL AO PORTRAIT
+    // ==========================================
+
+    info.style.position =
+      "relative";
+
+    info.style.height =
+      "106px";
+
+    info.style.minHeight =
+      "106px";
+
+    info.style.flexShrink =
+      "0";
+
+    info.style.overflow =
+      "visible";
+
 
     info.appendChild(name);
     info.appendChild(watches);
@@ -746,7 +783,7 @@ if (elementsList.length === 4) {
 
 
     // ==========================================
-    // ADD CARD TO RESULTS
+    // ADD RESULT TO RESULTS
     // ==========================================
 
     resultsDiv.appendChild(card);
