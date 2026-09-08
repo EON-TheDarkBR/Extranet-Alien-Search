@@ -90,14 +90,22 @@ function openSidePanel(alien, side) {
   // WEAKNESSES / RESISTANCES / IMMUNITIES
   // ==========================================
 
-  let weakSection = panel.querySelector("#WeaknessesSection");
-  let resistSection = panel.querySelector("#ResistancesSection");
-  let immuneSection = panel.querySelector("#ImmunitiesSection");
+  let weakSection =
+    panel.querySelector("#WeaknessesSection");
+
+  let resistSection =
+    panel.querySelector("#ResistancesSection");
+
+  let immuneSection =
+    panel.querySelector("#ImmunitiesSection");
 
 
   function renderElements(section, list) {
 
-    let filtered = list.filter(e => e !== "NONE");
+    let filtered =
+      list.filter(
+        e => e && e.trim().toUpperCase() !== "NONE"
+      );
 
     if (filtered.length === 0) return;
 
@@ -105,38 +113,54 @@ function openSidePanel(alien, side) {
     // Até 2 elementos → 1 linha
     if (filtered.length <= 2) {
 
-      let row = document.createElement("div");
+      let row =
+        document.createElement("div");
 
       row.style.display = "flex";
       row.style.justifyContent = "center";
       row.style.gap = "10px";
 
+
       filtered.forEach(el => {
 
-        let icon = document.createElement("img");
+        let icon =
+          document.createElement("img");
 
-        icon.src = "elements/" + el + ".png";
-        icon.style.height = "30px";
+        icon.src =
+          "elements/" +
+          el +
+          ".png";
+
+        icon.style.height =
+          "30px";
 
         row.appendChild(icon);
 
       });
 
+
       section.appendChild(row);
+
     }
 
 
     // 3 ou mais → quebra em linhas de 2
     if (filtered.length > 2) {
 
-      for (let i = 0; i < filtered.length; i += 2) {
+      for (
+        let i = 0;
+        i < filtered.length;
+        i += 2
+      ) {
 
-        let row = document.createElement("div");
+        let row =
+          document.createElement("div");
 
         row.style.display = "flex";
         row.style.justifyContent = "center";
         row.style.gap = "10px";
         row.style.marginTop = "5px";
+
 
         for (
           let j = i;
@@ -144,30 +168,53 @@ function openSidePanel(alien, side) {
           j++
         ) {
 
-          let icon = document.createElement("img");
+          let icon =
+            document.createElement("img");
 
-          icon.src = "elements/" + filtered[j] + ".png";
-          icon.style.height = "30px";
+          icon.src =
+            "elements/" +
+            filtered[j] +
+            ".png";
+
+          icon.style.height =
+            "30px";
 
           row.appendChild(icon);
+
         }
 
+
         section.appendChild(row);
+
       }
+
     }
+
   }
 
 
-  renderElements(weakSection, back.weaknesses || []);
-  renderElements(resistSection, back.resistances || []);
-  renderElements(immuneSection, back.immunities || []);
+  renderElements(
+    weakSection,
+    back.weaknesses || []
+  );
+
+  renderElements(
+    resistSection,
+    back.resistances || []
+  );
+
+  renderElements(
+    immuneSection,
+    back.immunities || []
+  );
 
 
   // ==========================================
   // PIN BUTTON
   // ==========================================
 
-  let pinButton = panel.querySelector(".pinButton");
+  let pinButton =
+    panel.querySelector(".pinButton");
 
 
   pinButton.onclick = function(e) {
@@ -183,13 +230,19 @@ function openSidePanel(alien, side) {
 
       if (leftPinned) {
 
-        pinButton.style.filter = "none";
-        pinButton.style.opacity = "1";
+        pinButton.style.filter =
+          "none";
+
+        pinButton.style.opacity =
+          "1";
 
       } else {
 
-        pinButton.style.filter = "grayscale(100%)";
-        pinButton.style.opacity = "0.6";
+        pinButton.style.filter =
+          "grayscale(100%)";
+
+        pinButton.style.opacity =
+          "0.6";
 
       }
 
@@ -204,13 +257,19 @@ function openSidePanel(alien, side) {
 
       if (rightPinned) {
 
-        pinButton.style.filter = "none";
-        pinButton.style.opacity = "1";
+        pinButton.style.filter =
+          "none";
+
+        pinButton.style.opacity =
+          "1";
 
       } else {
 
-        pinButton.style.filter = "grayscale(100%)";
-        pinButton.style.opacity = "0.6";
+        pinButton.style.filter =
+          "grayscale(100%)";
+
+        pinButton.style.opacity =
+          "0.6";
 
       }
 
@@ -223,97 +282,210 @@ function openSidePanel(alien, side) {
   // BIOLOGICAL STRUCTURE
   // ==========================================
 
-  let bioSection = panel.querySelector("#bioSection");
+  let bioSection =
+    panel.querySelector("#bioSection");
 
 
   let elementsList = [
+
     alien.body1,
     alien.body2,
-    alien.body3
-  ].filter(e => e !== "NONE");
+    alien.body3,
+    alien.body4
+
+  ].filter(
+    e => e && e.trim().toUpperCase() !== "NONE"
+  );
 
 
-  // 1 elemento
+  // ==========================================
+  // 1 ELEMENT
+  // ==========================================
+
   if (elementsList.length === 1) {
 
-    let row = document.createElement("div");
+    let row =
+      document.createElement("div");
 
-    let icon = document.createElement("img");
+    let icon =
+      document.createElement("img");
 
-    icon.src = "elements/" + elementsList[0] + ".png";
-    icon.style.height = "30px";
+    icon.src =
+      "elements/" +
+      elementsList[0] +
+      ".png";
+
+    icon.style.height =
+      "30px";
 
     row.appendChild(icon);
 
     bioSection.appendChild(row);
+
   }
 
 
-  // 2 elementos
+  // ==========================================
+  // 2 ELEMENTS
+  // ==========================================
+
   if (elementsList.length === 2) {
 
-    let row = document.createElement("div");
+    let row =
+      document.createElement("div");
 
-    row.style.display = "flex";
-    row.style.justifyContent = "center";
-    row.style.gap = "10px";
+    row.style.display =
+      "flex";
+
+    row.style.justifyContent =
+      "center";
+
+    row.style.gap =
+      "10px";
+
 
     elementsList.forEach(el => {
 
-      let icon = document.createElement("img");
+      let icon =
+        document.createElement("img");
 
-      icon.src = "elements/" + el + ".png";
-      icon.style.height = "30px";
+      icon.src =
+        "elements/" +
+        el +
+        ".png";
+
+      icon.style.height =
+        "30px";
 
       row.appendChild(icon);
 
     });
 
+
     bioSection.appendChild(row);
+
   }
 
 
-  // 3 elementos
+  // ==========================================
+  // 3 ELEMENTS
+  // ==========================================
+
   if (elementsList.length === 3) {
 
-    let topRow = document.createElement("div");
+    let topRow =
+      document.createElement("div");
 
-    topRow.style.display = "flex";
-    topRow.style.justifyContent = "center";
-    topRow.style.gap = "10px";
+    topRow.style.display =
+      "flex";
+
+    topRow.style.justifyContent =
+      "center";
+
+    topRow.style.gap =
+      "10px";
 
 
     for (let k = 0; k < 2; k++) {
 
-      let icon = document.createElement("img");
+      let icon =
+        document.createElement("img");
 
-      icon.src = "elements/" + elementsList[k] + ".png";
-      icon.style.height = "30px";
+      icon.src =
+        "elements/" +
+        elementsList[k] +
+        ".png";
+
+      icon.style.height =
+        "30px";
 
       topRow.appendChild(icon);
+
     }
 
 
-    let bottomRow = document.createElement("div");
+    let bottomRow =
+      document.createElement("div");
 
-    bottomRow.style.marginTop = "5px";
-    bottomRow.style.textAlign = "center";
+    bottomRow.style.marginTop =
+      "5px";
+
+    bottomRow.style.textAlign =
+      "center";
 
 
-    let icon = document.createElement("img");
+    let icon =
+      document.createElement("img");
 
     icon.src =
       "elements/" +
       elementsList[2] +
       ".png";
 
-    icon.style.height = "30px";
+    icon.style.height =
+      "30px";
+
 
     bottomRow.appendChild(icon);
 
 
     bioSection.appendChild(topRow);
     bioSection.appendChild(bottomRow);
+
+  }
+
+
+  // ==========================================
+  // 4 ELEMENTS
+  // ==========================================
+
+  if (elementsList.length === 4) {
+
+    for (let r = 0; r < 2; r++) {
+
+      let row =
+        document.createElement("div");
+
+      row.style.display =
+        "flex";
+
+      row.style.justifyContent =
+        "center";
+
+      row.style.gap =
+        "10px";
+
+      row.style.marginTop =
+        "5px";
+
+
+      for (let c = 0; c < 2; c++) {
+
+        let index =
+          r * 2 + c;
+
+
+        let icon =
+          document.createElement("img");
+
+        icon.src =
+          "elements/" +
+          elementsList[index] +
+          ".png";
+
+        icon.style.height =
+          "30px";
+
+
+        row.appendChild(icon);
+
+      }
+
+
+      bioSection.appendChild(row);
+
+    }
+
   }
 
 
@@ -326,76 +498,114 @@ function openSidePanel(alien, side) {
 
 
   let affinityList = [
+
     alien.ele1,
     alien.ele2,
     alien.ele3,
     alien.ele4
-  ].filter(e => e !== "NONE");
+
+  ].filter(
+    e => e && e.trim().toUpperCase() !== "NONE"
+  );
 
 
-  // Até 2 elementos
+  // ==========================================
+  // 1-2 ELEMENTS
+  // ==========================================
+
   if (affinityList.length <= 2) {
 
-    let row = document.createElement("div");
+    let row =
+      document.createElement("div");
 
-    row.style.display = "flex";
-    row.style.justifyContent = "center";
-    row.style.gap = "10px";
+    row.style.display =
+      "flex";
+
+    row.style.justifyContent =
+      "center";
+
+    row.style.gap =
+      "10px";
 
 
     affinityList.forEach(el => {
 
-      let icon = document.createElement("img");
+      let icon =
+        document.createElement("img");
 
       icon.src =
         "elements/" +
         el +
         ".png";
 
-      icon.style.height = "30px";
+      icon.style.height =
+        "30px";
 
       row.appendChild(icon);
 
     });
 
+
     affinitySection.appendChild(row);
+
   }
 
 
-  // 3 ou 4 elementos
+  // ==========================================
+  // 3-4 ELEMENTS
+  // ==========================================
+
   if (affinityList.length > 2) {
 
-    for (let i = 0; i < affinityList.length; i += 2) {
+    for (
+      let i = 0;
+      i < affinityList.length;
+      i += 2
+    ) {
 
-      let row = document.createElement("div");
+      let row =
+        document.createElement("div");
 
-      row.style.display = "flex";
-      row.style.justifyContent = "center";
-      row.style.gap = "10px";
-      row.style.marginTop = "5px";
+      row.style.display =
+        "flex";
+
+      row.style.justifyContent =
+        "center";
+
+      row.style.gap =
+        "10px";
+
+      row.style.marginTop =
+        "5px";
 
 
       for (
         let j = i;
-        j < i + 2 && j < affinityList.length;
+        j < i + 2 &&
+        j < affinityList.length;
         j++
       ) {
 
-        let icon = document.createElement("img");
+        let icon =
+          document.createElement("img");
 
         icon.src =
           "elements/" +
           affinityList[j] +
           ".png";
 
-        icon.style.height = "30px";
+        icon.style.height =
+          "30px";
 
         row.appendChild(icon);
+
       }
 
 
       affinitySection.appendChild(row);
+
     }
+
   }
 
 
@@ -404,10 +614,12 @@ function openSidePanel(alien, side) {
   // ==========================================
 
   let statsNames = [
+
     "HP:",
     "ATK:",
     "SPA:",
     "SPE:"
+
   ];
 
 
@@ -416,26 +628,40 @@ function openSidePanel(alien, side) {
 
 
   // Título
-  let statsTitle = document.createElement("div");
+  let statsTitle =
+    document.createElement("div");
 
-  statsTitle.innerText = "Stats";
+  statsTitle.innerText =
+    "Stats";
 
-  statsTitle.style.textAlign = "center";
-  statsTitle.style.fontWeight = "bold";
-  statsTitle.style.fontSize = "18px";
-  statsTitle.style.marginBottom = "10px";
+  statsTitle.style.textAlign =
+    "center";
 
-  statsContainer.appendChild(statsTitle);
+  statsTitle.style.fontWeight =
+    "bold";
+
+  statsTitle.style.fontSize =
+    "18px";
+
+  statsTitle.style.marginBottom =
+    "10px";
+
+
+  statsContainer.appendChild(
+    statsTitle
+  );
 
 
   // Barras
   for (let i = 0; i < 4; i++) {
 
     statsContainer.appendChild(
+
       createStatBar(
         statsNames[i],
         alien.stats[i]
       )
+
     );
 
   }
@@ -453,15 +679,26 @@ function openSidePanel(alien, side) {
     document.createElement("div");
 
   totalText.innerText =
-    "Total: " + total;
+    "Total: " +
+    total;
 
-  totalText.style.textAlign = "center";
-  totalText.style.marginTop = "15px";
-  totalText.style.fontWeight = "bold";
-  totalText.style.fontSize = "16px";
+  totalText.style.textAlign =
+    "center";
+
+  totalText.style.marginTop =
+    "15px";
+
+  totalText.style.fontWeight =
+    "bold";
+
+  totalText.style.fontSize =
+    "16px";
 
 
-  statsContainer.appendChild(totalText);
+  statsContainer.appendChild(
+    totalText
+  );
+
 }
 
 
@@ -477,6 +714,7 @@ document.addEventListener("click", function(e) {
   let right =
     document.getElementById("rightPanel");
 
+
   let clickedInsideCard =
     e.target.closest(".result");
 
@@ -488,7 +726,9 @@ document.addEventListener("click", function(e) {
     !leftPinned
   ) {
 
-    left.classList.remove("open");
+    left.classList.remove(
+      "open"
+    );
 
   }
 
@@ -500,7 +740,9 @@ document.addEventListener("click", function(e) {
     !rightPinned
   ) {
 
-    right.classList.remove("open");
+    right.classList.remove(
+      "open"
+    );
 
   }
 

@@ -48,9 +48,9 @@ const aliens = [
 
   {id: 1024, name: "ECHO ECHO", display: "Echo Echo", portrait: "Portraits/ECHO ECHO.png", availability: [0, 1, 1, 1, 0, 0, 0],body1:"MECHANICAL",body2:"NONE",body3:"NONE",ele1:"SOUND",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[30,20,80,20]},
 
-  {id: 1025, name: "HUMUNGOUSAUR", display: "Humungousaur", portrait: "Portraits/HUMUNGOUSAUR.png", availability: [0, 1, 1, 1, 0, 0, 0],body1:"ORGANIC",body2:"NONE",body3:"NONE",ele1:"WIND",ele2:"NONE",ele3:"NONE",ele4:"NONE",stats:[70,40,30,35]},
+  {id: 1025, name: "HUMUNGOUSAUR", display: "Humungousaur", portrait: "Portraits/HUMUNGOUSAUR.png", availability: [0, 1, 1, 1, 0, 1, 0],body1:"ORGANIC",body2:"NONE",body3:"NONE",ele1:"WIND",ele2:"NONE",ele3:"NONE",ele4:"NONE",stats:[70,40,30,35]},
 
-  {id: 1026, name: "HUMUNGOUSAUR (FULL SIZE)", display: "Humungousaur (Full Size)", portrait: "Portraits/HUMUNGOUSAUR_FULL_SIZE.png", availability: [0, 1, 1, 1, 0, 0, 0],body1:"ORGANIC",body2:"NONE",body3:"NONE",ele1:"WIND",ele2:"NONE",ele3:"NONE",ele4:"NONE",stats:[80,70,40,40]},
+  {id: 1026, name: "HUMUNGOUSAUR (FULL SIZE)", display: "Humungousaur (Full Size)", portrait: "Portraits/HUMUNGOUSAUR_FULL_SIZE.png", availability: [0, 1, 1, 1, 0, 1, 0],body1:"ORGANIC",body2:"NONE",body3:"NONE",ele1:"WIND",ele2:"NONE",ele3:"NONE",ele4:"NONE",stats:[80,70,40,40]},
 
   {id: 1027, name: "JETRAY", display: "Jetray", portrait: "Portraits/JETRAY.png", availability: [0, 1, 1, 1, 0, 0, 0],body1:"ORGANIC",body2:"NONE",body3:"NONE",ele1:"ENERGY",ele2:"NONE",ele3:"NONE",ele4:"NONE",stats:[45,20,40,100]},
 
@@ -72,7 +72,7 @@ const aliens = [
 
   {id: 1036, name: "NANOMECH", display: "Nanomech", portrait: "Portraits/NANOMECH.png", availability: [0, 1, 1, 1, 0, 0, 0],body1:"MECHANICAL",body2:"ORGANIC",body3:"NONE",ele1:"ENERGY",ele2:"NONE",ele3:"NONE",ele4:"NONE",stats:[10,1,15,15]},
 
-  {id: 1037, name: "RATH", display: "Rath", portrait: "Portraits/RATH.png", availability: [0, 1, 1, 1, 0, 0, 0],body1:"ORGANIC",body2:"NONE",body3:"NONE",ele1:"WIND",ele2:"NONE",ele3:"NONE",ele4:"NONE",stats:[80,50,30,40]},
+  {id: 1037, name: "RATH", display: "Rath", portrait: "Portraits/RATH.png", availability: [0, 1, 1, 1, 0, 1, 0],body1:"ORGANIC",body2:"NONE",body3:"NONE",ele1:"WIND",ele2:"NONE",ele3:"NONE",ele4:"NONE",stats:[80,50,30,40]},
 
   {id: 1038, name: "DIAMONDHEAD (CHROMATIZED)", display: "Diamondhead (Chromatized)", portrait: "Portraits/DIAMONDHEAD_CHROMATIZED.png", availability: [0, 1, 1, 0, 0, 0, 0],body1:"MINERAL",body2:"NONE",body3:"NONE",ele1:"ENERGY",ele2:"MINERAL",ele3:"NONE",ele4:"NONE",stats:[70,70,70,50]},
 
@@ -92,7 +92,7 @@ const aliens = [
 
   {id: 1046, name: "FASTTRACK", display: "Fasttrack", portrait: "Portraits/FASTTRACK.png", availability: [0, 0, 1, 1, 0, 0, 0],body1:"ORGANIC",body2:"NONE",body3:"NONE",ele1:"NONE",ele2:"NONE",ele3:"NONE",ele4:"NONE",stats:[30,30,0,70]},
 
-  {id: 1047, name: "BUZZSHOCK", display: "Buzzshock", portrait: "Portraits/BUZZSHOCK.png", availability: [0, 0, 1, 1, 0, 0, 0],body1:"ELECTRIC",body2:"MECHANICAL",body3:"NONE",ele1:"ELECTRIC",ele2:"NONE",ele3:"NONE",ele4:"NONE",stats:[20,10,20,30]},
+  {id: 1047, name: "BUZZSHOCK", display: "Buzzshock", portrait: "Portraits/BUZZSHOCK.png", availability: [0, 0, 1, 1, 0, 0, 0],body1:"ELECTRIC",body2:"MECHANICAL",body3:"NONE",ele1:"ELECTRIC",ele2:"NONE",ele3:"NONE",ele4:"NONE",stats:[20,10,25,30]},
 
   {id: 1048, name: "SPITTER", display: "Spitter", portrait: "Portraits/SPITTER.png", availability: [0, 0, 1, 1, 0, 0, 0],body1:"ORGANIC",body2:"NONE",body3:"NONE",ele1:"NONE",ele2:"NONE",ele3:"NONE",ele4:"NONE",stats:[40,0,35,10]},
 
@@ -192,7 +192,27 @@ const aliens = [
 
   {id: 1096, name: "GAX", display: "Gax", portrait: "Portraits/GAX.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"ORGANIC",body2:"MECHANICAL",body3:"NONE",ele1:"ENERGY",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[90,60,30,50]},
   
-  {id: 1097, name: "SHOCKROCK", display: "Shockrock", portrait: "Portraits/SHOCKROCK.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"ELECTRIC",body2:"MINERAL",body3:"NONE",ele1:"ELECTRIC",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[70,80,60,40]}
+  {id: 1097, name: "SHOCK ROCK", display: "Shock Rock", portrait: "Portraits/SHOCKROCK.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"ELECTRIC",body2:"MINERAL",body3:"NONE",ele1:"ELECTRIC",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[70,80,60,20]},
+
+  {id: 1098, name: "(OMNI-ENHANCED) DIAMONDHEAD", display: "(Omni-Enhanced) Diamondhead", portrait: "Portraits/DIAMONDHEAD ENHANCED.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"MINERAL",body2:"ELECTRIC",body3:"NONE",ele1:"MINERAL",ele2:"ELECTRIC", ele3:"NONE",ele4:"NONE",stats:[70,70,50,50]},
+
+  {id: 1099, name: "(OMNI-ENHANCED) GREY MATTER", display: "(Omni-Enhanced) Grey Matter", portrait: "Portraits/GREY MATTER ENHANCED.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"MINERAL",body2:"ELECTRIC",body3:"ORGANIC",ele1:"ELECTRIC",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[40,40,20,20]},
+
+  {id: 1100, name: "(OMNI-ENHANCED) WILDVINE", display: "(Omni-Enhanced) Wildvine", portrait: "Portraits/WILDVINE ENHANCED.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"MINERAL",body2:"ELECTRIC",body3:"BOTANICAL",ele1:"ELECTRIC",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[60,55,40,20]},
+
+  {id: 1101, name: "(OMNI-ENHANCED) HEATBLAST", display: "(Omni-Enhanced) Heatblast", portrait: "Portraits/HEATBLAST ENHANCED.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"MINERAL",body2:"FIRE",body3:"ELECTRIC",ele1:"FIRE",ele2:"ELECTRIC", ele3:"NONE",ele4:"NONE",stats:[55,50,80,80]},
+
+  {id: 1102, name: "(OMNI-ENHANCED) FOUR ARMS", display: "(Omni-Enhanced) Four Arms", portrait: "Portraits/FOUR ARMS ENHANCED.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"ORGANIC",body2:"MINERAL",body3:"ELECTRIC",ele1:"ELECTRIC",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[65,70,30,40]},
+
+  {id: 1103, name: "(OMNI-ENHANCED) CANNONBOLT", display: "(Omni-Enhanced) Cannonbolt", portrait: "Portraits/CANNONBOLT ENHANCED.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"ORGANIC",body2:"MINERAL",body3:"ELECTRIC",ele1:"ELECTRIC",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[80,50,30,60]},
+
+  {id: 1104, name: "(OMNI-ENHANCED) STINKFLY (REBOOT)", display: "(Omni-Enhanced) Stinkfly", portrait: "Portraits/STINKFLY REBOOT ENHANCED.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"ORGANIC",body2:"MINERAL",body3:"ELECTRIC",ele1:"ELECTRIC",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[50,35,30,60]},
+
+  {id: 1105, name: "(OMNI-ENHANCED) OVERFLOW", display: "(Omni-Enhanced) Overflow", portrait: "Portraits/OVERFLOW ENHANCED.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"WATER",body2:"ELECTRIC",body3:"MECHANICAL",body4:"MINERAL",ele1:"WATER",ele2:"ELECTRIC", ele3:"ICE",ele4:"WIND",stats:[55,50,60,60]},
+
+  {id: 1106, name: "(OMNI-ENHANCED) XLR8", display: "(Omni-Enhanced) XLR8", portrait: "Portraits/XLR8 ENHANCED.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"MINERAL",body2:"ELECTRIC",body3:"ORGANIC",ele1:"ELECTRIC",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[55,50,20,90]}
+
+
 
 
 ];

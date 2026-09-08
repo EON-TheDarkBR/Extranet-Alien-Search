@@ -242,45 +242,202 @@ function searchAlien() {
     }
 
 
-    // ==========================================
-    // BIOLOGICAL STRUCTURE
-    // ==========================================
+// ==========================================
+// BIOLOGICAL STRUCTURE
+// ==========================================
 
-    let elementsList = [
+let elementsList = [
 
-      alien.body1,
-      alien.body2,
-      alien.body3
+  alien.body1,
+  alien.body2,
+  alien.body3,
+  alien.body4
 
-    ].filter(
-      e => e !== "NONE"
-    );
+].filter(
+  e => e && e.trim().toUpperCase() !== "NONE"
+);
 
 
-    let elementsContainer =
+let elementsContainer =
+  document.createElement("div");
+
+elementsContainer.style.display =
+  "flex";
+
+elementsContainer.style.flexDirection =
+  "column";
+
+elementsContainer.style.marginTop =
+  "5px";
+
+elementsContainer.style.marginLeft =
+  "350px";
+
+
+// ==========================================
+// 1 ELEMENT
+// ==========================================
+
+if (elementsList.length === 1) {
+
+  let row =
+    document.createElement("div");
+
+
+  let icon =
+    document.createElement("img");
+
+  icon.src =
+    "elements/" +
+    elementsList[0] +
+    ".png";
+
+  icon.style.height =
+    "30px";
+
+
+  row.appendChild(icon);
+
+  elementsContainer.appendChild(row);
+
+}
+
+
+// ==========================================
+// 2 ELEMENTS
+// ==========================================
+
+if (elementsList.length === 2) {
+
+  let row =
+    document.createElement("div");
+
+  row.style.display =
+    "flex";
+
+  row.style.gap =
+    "10px";
+
+
+  elementsList.forEach(el => {
+
+    let icon =
+      document.createElement("img");
+
+    icon.src =
+      "elements/" +
+      el +
+      ".png";
+
+    icon.style.height =
+      "30px";
+
+
+    row.appendChild(icon);
+
+  });
+
+
+  elementsContainer.appendChild(row);
+
+}
+
+
+// ==========================================
+// 3 ELEMENTS
+// ==========================================
+
+if (elementsList.length === 3) {
+
+  // Linha superior
+  let topRow =
+    document.createElement("div");
+
+  topRow.style.display =
+    "flex";
+
+  topRow.style.gap =
+    "10px";
+
+
+  for (let k = 0; k < 2; k++) {
+
+    let icon =
+      document.createElement("img");
+
+    icon.src =
+      "elements/" +
+      elementsList[k] +
+      ".png";
+
+    icon.style.height =
+      "30px";
+
+
+    topRow.appendChild(icon);
+
+  }
+
+
+  // Linha inferior
+  let bottomRow =
+    document.createElement("div");
+
+  bottomRow.style.marginTop =
+    "5px";
+
+
+  let icon =
+    document.createElement("img");
+
+  icon.src =
+    "elements/" +
+    elementsList[2] +
+    ".png";
+
+  icon.style.height =
+    "30px";
+
+
+  bottomRow.appendChild(icon);
+
+
+  elementsContainer.appendChild(
+    topRow
+  );
+
+  elementsContainer.appendChild(
+    bottomRow
+  );
+
+}
+
+
+// ==========================================
+// 4 ELEMENTS
+// ==========================================
+
+if (elementsList.length === 4) {
+
+  for (let r = 0; r < 2; r++) {
+
+    let row =
       document.createElement("div");
 
-    elementsContainer.style.display =
+    row.style.display =
       "flex";
 
-    elementsContainer.style.flexDirection =
-      "column";
+    row.style.gap =
+      "10px";
 
-    elementsContainer.style.marginTop =
+    row.style.marginTop =
       "5px";
 
-    elementsContainer.style.marginLeft =
-      "350px";
 
+    for (let c = 0; c < 2; c++) {
 
-    // ==========================================
-    // 1 ELEMENT
-    // ==========================================
-
-    if (elementsList.length === 1) {
-
-      let row =
-        document.createElement("div");
+      let index =
+        r * 2 + c;
 
 
       let icon =
@@ -288,7 +445,7 @@ function searchAlien() {
 
       icon.src =
         "elements/" +
-        elementsList[0] +
+        elementsList[index] +
         ".png";
 
       icon.style.height =
@@ -297,119 +454,14 @@ function searchAlien() {
 
       row.appendChild(icon);
 
-      elementsContainer.appendChild(row);
-
     }
 
 
-    // ==========================================
-    // 2 ELEMENTS
-    // ==========================================
+    elementsContainer.appendChild(row);
 
-    if (elementsList.length === 2) {
+  }
 
-      let row =
-        document.createElement("div");
-
-      row.style.display =
-        "flex";
-
-      row.style.gap =
-        "10px";
-
-
-      elementsList.forEach(el => {
-
-        let icon =
-          document.createElement("img");
-
-        icon.src =
-          "elements/" +
-          el +
-          ".png";
-
-        icon.style.height =
-          "30px";
-
-
-        row.appendChild(icon);
-
-      });
-
-
-      elementsContainer.appendChild(row);
-
-    }
-
-
-    // ==========================================
-    // 3 ELEMENTS
-    // ==========================================
-
-    if (elementsList.length === 3) {
-
-      // Linha superior
-      let topRow =
-        document.createElement("div");
-
-      topRow.style.display =
-        "flex";
-
-      topRow.style.gap =
-        "10px";
-
-
-      for (let k = 0; k < 2; k++) {
-
-        let icon =
-          document.createElement("img");
-
-        icon.src =
-          "elements/" +
-          elementsList[k] +
-          ".png";
-
-        icon.style.height =
-          "30px";
-
-
-        topRow.appendChild(icon);
-
-      }
-
-
-      // Linha inferior
-      let bottomRow =
-        document.createElement("div");
-
-      bottomRow.style.marginTop =
-        "5px";
-
-
-      let icon =
-        document.createElement("img");
-
-      icon.src =
-        "elements/" +
-        elementsList[2] +
-        ".png";
-
-      icon.style.height =
-        "30px";
-
-
-      bottomRow.appendChild(icon);
-
-
-      elementsContainer.appendChild(
-        topRow
-      );
-
-      elementsContainer.appendChild(
-        bottomRow
-      );
-
-    }
+}
 
 
     // ==========================================
