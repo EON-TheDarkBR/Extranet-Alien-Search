@@ -42,7 +42,7 @@ const aliens = [
 
   {id: 1021, name: "ARCTIGUANA", display: "Arctiguana", portrait: "Portraits/ARCTIGUANA.png", availability: [1, 0, 1, 1, 0, 0, 0],body1:"ORGANIC",body2:"NONE",body3:"NONE",ele1:"ICE",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[40,30,0,50]},
 
-  {id: 1022, name: "FEEDBACK", display: "Feedback", portrait: "Portraits/FEEDBACK.png", availability: [1, 0, 0, 1, 0, 0, 0],body1:"ORGANIC",body2:"ELECTRIC",body3:"NONE",ele1:"ELECTRIC",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[40,30,40,50]},
+  {id: 1022, name: "FEEDBACK", display: "Feedback", portrait: "Portraits/FEEDBACK.png", availability: [0, 0, 0, 1, 0, 0, 0],body1:"ORGANIC",body2:"ELECTRIC",body3:"NONE",ele1:"ELECTRIC",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[40,30,40,50]},
 
   {id: 1023, name: "SWAMPFIRE", display: "Swampfire", portrait: "Portraits/SWAMPFIRE.png", availability: [0, 1, 1, 0, 0, 0, 0],body1:"BOTANICAL",body2:"NONE",body3:"NONE",ele1:"FIRE",ele2:"GAS", ele3:"NONE",ele4:"NONE",stats:[45,30,40,50]},
 
@@ -192,7 +192,7 @@ const aliens = [
 
   {id: 1096, name: "GAX", display: "Gax", portrait: "Portraits/GAX.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"ORGANIC",body2:"MECHANICAL",body3:"NONE",ele1:"ENERGY",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[90,60,30,50]},
   
-  {id: 1097, name: "SHOCK ROCK", display: "Shock Rock", portrait: "Portraits/SHOCKROCK.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"ELECTRIC",body2:"MINERAL",body3:"NONE",ele1:"ELECTRIC",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[70,80,60,20]},
+  {id: 1097, name: "SHOCK ROCK", display: "Shock Rock", portrait: "Portraits/SHOCKROCK.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"ELECTRIC",body2:"MINERAL",body3:"NONE",ele1:"ELECTRIC",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[70,80,50,20]},
 
   {id: 1098, name: "(OMNI-ENHANCED) DIAMONDHEAD", display: "(Omni-Enhanced) Diamondhead", portrait: "Portraits/DIAMONDHEAD ENHANCED.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"MINERAL",body2:"ELECTRIC",body3:"NONE",ele1:"MINERAL",ele2:"ELECTRIC", ele3:"NONE",ele4:"NONE",stats:[70,70,50,50]},
 
@@ -210,7 +210,12 @@ const aliens = [
 
   {id: 1105, name: "(OMNI-ENHANCED) OVERFLOW", display: "(Omni-Enhanced) Overflow", portrait: "Portraits/OVERFLOW ENHANCED.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"WATER",body2:"ELECTRIC",body3:"MECHANICAL",body4:"MINERAL",ele1:"WATER",ele2:"ELECTRIC", ele3:"ICE",ele4:"WIND",stats:[55,50,60,60]},
 
-  {id: 1106, name: "(OMNI-ENHANCED) XLR8", display: "(Omni-Enhanced) XLR8", portrait: "Portraits/XLR8 ENHANCED.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"MINERAL",body2:"ELECTRIC",body3:"ORGANIC",ele1:"ELECTRIC",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[55,50,20,90]}
+  {id: 1106, name: "(OMNI-ENHANCED) XLR8", display: "(Omni-Enhanced) XLR8", portrait: "Portraits/XLR8 ENHANCED.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"MINERAL",body2:"ELECTRIC",body3:"ORGANIC",ele1:"ELECTRIC",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[55,50,20,90]},
+
+  {id: 1107, name: "XLRARMSBLASTDIAMONDHEAT", display: "XLRArmBlastDiamondHeat", portrait: "Portraits/XLRArmBlastDiamondHeat.png", availability: [0, 0, 0, 0, 0, 0, 0],body1:"ORGANIC",body2:"MINERAL",body3:"FIRE",ele1:"MINERAL",ele2:"FIRE", ele3:"WIND",ele4:"NONE",stats:[70,70,80,80]},
+
+  {id: 1108, name: "SLAPBACK", display: "Slapback", portrait: "Portraits/SLAPBACK.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"MECHANICAL",body2:"NONE",body3:"NONE",ele1:"NONE",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[50,25,0,20]}
+
 
 
 

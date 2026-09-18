@@ -3,9 +3,13 @@
    ========================================== */
 
 body {
+
   background-color: #9cd1a1;
+
   margin: 0;
+
   font-family: Arial, sans-serif;
+
 }
 
 
@@ -14,55 +18,69 @@ body {
    ========================================== */
 
 .quadrado {
+
   width: 900px;
+
   height: 200px;
 
   background: rgb(40, 235, 99);
 
-  position: absolute;
-  top: 20%;
+  position: fixed;
+
+  top: 0;
+
   left: 50%;
 
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
 
-  border-radius: 20px;
+  border-radius: 0 0 20px 20px;
 
-  z-index: 1;
+  z-index: 1000;
+
 }
 
 
 .searchbar {
+
   width: 800px;
+
   height: 44px;
 
   background: white;
 
-  position: absolute;
-  top: 20%;
+  position: fixed;
+
+  top: 60px;
+
   left: 50%;
 
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
 
   border: none;
+
   border-radius: 50px;
 
   padding-left: 20px;
 
   font-family: Arial, sans-serif;
+
   font-size: 18px;
 
   outline: none;
 
-  z-index: 2;
+  z-index: 1001;
 
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 
   transition: 0.2s;
+
 }
 
 
 .searchbar:focus {
+
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+
 }
 
 
@@ -78,33 +96,43 @@ body {
 #affinityContainer,
 #structureContainer,
 #sortContainer {
-  position: absolute;
 
-  top: calc(20% + 35px);
+  position: fixed;
+
+  top: 125px;
 
   transform: translateX(-50%);
 
-  z-index: 10;
+  z-index: 1001;
+
 }
 
 
 #playlistContainer {
+
   left: calc(50% - 270px);
+
 }
 
 
 #affinityContainer {
+
   left: calc(50% - 90px);
+
 }
 
 
 #structureContainer {
+
   left: calc(50% + 110px);
+
 }
 
 
 #sortContainer {
+
   left: calc(50% + 290px);
+
 }
 
 
@@ -122,12 +150,15 @@ body {
   padding: 0 20px;
 
   border: none;
+
   border-radius: 50px;
 
   background: white;
 
   font-family: Arial, sans-serif;
+
   font-size: 16px;
+
   font-weight: bold;
 
   color: #222;
@@ -140,6 +171,7 @@ body {
     transform 0.2s,
     box-shadow 0.2s,
     background 0.2s;
+
 }
 
 
@@ -153,6 +185,7 @@ body {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
 
   background: #f8f8f8;
+
 }
 
 
@@ -198,6 +231,7 @@ body {
   transition: 0.2s;
 
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
 }
 
 
@@ -224,14 +258,18 @@ body {
    ========================================== */
 
 #playlistMenu {
+
   right: 0;
+
 }
 
 
 #affinityMenu,
 #structureMenu,
 #sortMenu {
+
   left: 0;
+
 }
 
 
@@ -419,9 +457,13 @@ body {
 
 
 .sortOption.selected {
+
   background: #82A9C3;
+
   color: white;
+
   font-weight: bold;
+
 }
 
 
@@ -485,13 +527,15 @@ body {
 
   position: absolute;
 
-  top: 35%;
+  top: 240px;
 
   left: 50%;
 
   transform: translateX(-50%);
 
   width: 600px;
+
+  z-index: 1;
 
 }
 
@@ -556,7 +600,7 @@ body {
 
 .result:hover {
 
-  transform: scale(1.03);
+  transform: scale(1.09);
 
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 
@@ -610,9 +654,11 @@ body {
   position: fixed;
 
   top: 0;
+
   left: -400px;
 
   width: 400px;
+
   height: 100%;
 
   background-color: rgb(235, 235, 235);
@@ -664,9 +710,11 @@ body {
   position: fixed;
 
   top: 0;
+
   right: -400px;
 
   width: 400px;
+
   height: 100%;
 
   background-color: rgb(235, 235, 235);
