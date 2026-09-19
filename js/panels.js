@@ -1,5 +1,12 @@
+// ==========================================
+// PANEL STATE
+// ==========================================
+
 let leftPinned = false;
 let rightPinned = false;
+
+let leftAlien = null;
+let rightAlien = null;
 
 
 // ==========================================
@@ -8,10 +15,60 @@ let rightPinned = false;
 
 function openSidePanel(alien, side) {
 
-  let panel = document.getElementById(side);
-  let back = aliensbackcards.find(a => a.name === alien.name) || {};
+
+  // ==========================================
+  // SAVE CURRENT ALIEN
+  // ==========================================
+
+  if (side === "sidePanel") {
+
+    leftAlien = alien;
+
+  } else {
+
+    rightAlien = alien;
+
+  }
+
+
+  // ==========================================
+  // GET PANEL
+  // ==========================================
+
+  let panel =
+    document.getElementById(side);
+
+  // ==========================================
+  // GET BACKCARD
+  // ==========================================
+
+  let back =
+    aliensbackcards.find(
+      a => a.name === alien.name
+    ) || {};
+
+
+  console.log(
+    "PANEL: backcard:",
+    back
+  );
+
+
+  // ==========================================
+  // OPEN PANEL
+  // ==========================================
 
   panel.classList.add("open");
+
+
+  console.log(
+    "PANEL: classe open adicionada"
+  );
+
+
+  // ==========================================
+  // PANEL CONTENT
+  // ==========================================
 
   panel.innerHTML = `
     <div style="text-align:center; position:relative;">
@@ -107,6 +164,7 @@ function openSidePanel(alien, side) {
         e => e && e.trim().toUpperCase() !== "NONE"
       );
 
+
     if (filtered.length === 0) return;
 
 
@@ -131,8 +189,7 @@ function openSidePanel(alien, side) {
           el +
           ".png";
 
-        icon.style.height =
-          "30px";
+        icon.style.height = "30px";
 
         row.appendChild(icon);
 
@@ -176,8 +233,7 @@ function openSidePanel(alien, side) {
             filtered[j] +
             ".png";
 
-          icon.style.height =
-            "30px";
+          icon.style.height = "30px";
 
           row.appendChild(icon);
 
@@ -230,19 +286,15 @@ function openSidePanel(alien, side) {
 
       if (leftPinned) {
 
-        pinButton.style.filter =
-          "none";
-
-        pinButton.style.opacity =
-          "1";
+        pinButton.style.filter = "none";
+        pinButton.style.opacity = "1";
 
       } else {
 
         pinButton.style.filter =
           "grayscale(100%)";
 
-        pinButton.style.opacity =
-          "0.6";
+        pinButton.style.opacity = "0.6";
 
       }
 
@@ -257,19 +309,15 @@ function openSidePanel(alien, side) {
 
       if (rightPinned) {
 
-        pinButton.style.filter =
-          "none";
-
-        pinButton.style.opacity =
-          "1";
+        pinButton.style.filter = "none";
+        pinButton.style.opacity = "1";
 
       } else {
 
         pinButton.style.filter =
           "grayscale(100%)";
 
-        pinButton.style.opacity =
-          "0.6";
+        pinButton.style.opacity = "0.6";
 
       }
 
@@ -315,8 +363,7 @@ function openSidePanel(alien, side) {
       elementsList[0] +
       ".png";
 
-    icon.style.height =
-      "30px";
+    icon.style.height = "30px";
 
     row.appendChild(icon);
 
@@ -334,14 +381,9 @@ function openSidePanel(alien, side) {
     let row =
       document.createElement("div");
 
-    row.style.display =
-      "flex";
-
-    row.style.justifyContent =
-      "center";
-
-    row.style.gap =
-      "10px";
+    row.style.display = "flex";
+    row.style.justifyContent = "center";
+    row.style.gap = "10px";
 
 
     elementsList.forEach(el => {
@@ -354,8 +396,7 @@ function openSidePanel(alien, side) {
         el +
         ".png";
 
-      icon.style.height =
-        "30px";
+      icon.style.height = "30px";
 
       row.appendChild(icon);
 
@@ -376,14 +417,9 @@ function openSidePanel(alien, side) {
     let topRow =
       document.createElement("div");
 
-    topRow.style.display =
-      "flex";
-
-    topRow.style.justifyContent =
-      "center";
-
-    topRow.style.gap =
-      "10px";
+    topRow.style.display = "flex";
+    topRow.style.justifyContent = "center";
+    topRow.style.gap = "10px";
 
 
     for (let k = 0; k < 2; k++) {
@@ -396,8 +432,7 @@ function openSidePanel(alien, side) {
         elementsList[k] +
         ".png";
 
-      icon.style.height =
-        "30px";
+      icon.style.height = "30px";
 
       topRow.appendChild(icon);
 
@@ -407,11 +442,8 @@ function openSidePanel(alien, side) {
     let bottomRow =
       document.createElement("div");
 
-    bottomRow.style.marginTop =
-      "5px";
-
-    bottomRow.style.textAlign =
-      "center";
+    bottomRow.style.marginTop = "5px";
+    bottomRow.style.textAlign = "center";
 
 
     let icon =
@@ -422,9 +454,7 @@ function openSidePanel(alien, side) {
       elementsList[2] +
       ".png";
 
-    icon.style.height =
-      "30px";
-
+    icon.style.height = "30px";
 
     bottomRow.appendChild(icon);
 
@@ -446,17 +476,10 @@ function openSidePanel(alien, side) {
       let row =
         document.createElement("div");
 
-      row.style.display =
-        "flex";
-
-      row.style.justifyContent =
-        "center";
-
-      row.style.gap =
-        "10px";
-
-      row.style.marginTop =
-        "5px";
+      row.style.display = "flex";
+      row.style.justifyContent = "center";
+      row.style.gap = "10px";
+      row.style.marginTop = "5px";
 
 
       for (let c = 0; c < 2; c++) {
@@ -473,9 +496,7 @@ function openSidePanel(alien, side) {
           elementsList[index] +
           ".png";
 
-        icon.style.height =
-          "30px";
-
+        icon.style.height = "30px";
 
         row.appendChild(icon);
 
@@ -518,14 +539,9 @@ function openSidePanel(alien, side) {
     let row =
       document.createElement("div");
 
-    row.style.display =
-      "flex";
-
-    row.style.justifyContent =
-      "center";
-
-    row.style.gap =
-      "10px";
+    row.style.display = "flex";
+    row.style.justifyContent = "center";
+    row.style.gap = "10px";
 
 
     affinityList.forEach(el => {
@@ -538,8 +554,7 @@ function openSidePanel(alien, side) {
         el +
         ".png";
 
-      icon.style.height =
-        "30px";
+      icon.style.height = "30px";
 
       row.appendChild(icon);
 
@@ -566,17 +581,10 @@ function openSidePanel(alien, side) {
       let row =
         document.createElement("div");
 
-      row.style.display =
-        "flex";
-
-      row.style.justifyContent =
-        "center";
-
-      row.style.gap =
-        "10px";
-
-      row.style.marginTop =
-        "5px";
+      row.style.display = "flex";
+      row.style.justifyContent = "center";
+      row.style.gap = "10px";
+      row.style.marginTop = "5px";
 
 
       for (
@@ -594,8 +602,7 @@ function openSidePanel(alien, side) {
           affinityList[j] +
           ".png";
 
-        icon.style.height =
-          "30px";
+        icon.style.height = "30px";
 
         row.appendChild(icon);
 
@@ -627,24 +634,16 @@ function openSidePanel(alien, side) {
     panel.querySelector("#statsContainer");
 
 
-  // Título
   let statsTitle =
     document.createElement("div");
 
   statsTitle.innerText =
     "Stats";
 
-  statsTitle.style.textAlign =
-    "center";
-
-  statsTitle.style.fontWeight =
-    "bold";
-
-  statsTitle.style.fontSize =
-    "18px";
-
-  statsTitle.style.marginBottom =
-    "10px";
+  statsTitle.style.textAlign = "center";
+  statsTitle.style.fontWeight = "bold";
+  statsTitle.style.fontSize = "18px";
+  statsTitle.style.marginBottom = "10px";
 
 
   statsContainer.appendChild(
@@ -682,17 +681,10 @@ function openSidePanel(alien, side) {
     "Total: " +
     total;
 
-  totalText.style.textAlign =
-    "center";
-
-  totalText.style.marginTop =
-    "15px";
-
-  totalText.style.fontWeight =
-    "bold";
-
-  totalText.style.fontSize =
-    "16px";
+  totalText.style.textAlign = "center";
+  totalText.style.marginTop = "15px";
+  totalText.style.fontWeight = "bold";
+  totalText.style.fontSize = "16px";
 
 
   statsContainer.appendChild(
@@ -726,9 +718,7 @@ document.addEventListener("click", function(e) {
     !leftPinned
   ) {
 
-    left.classList.remove(
-      "open"
-    );
+    left.classList.remove("open");
 
   }
 
@@ -740,9 +730,7 @@ document.addEventListener("click", function(e) {
     !rightPinned
   ) {
 
-    right.classList.remove(
-      "open"
-    );
+    right.classList.remove("open");
 
   }
 
