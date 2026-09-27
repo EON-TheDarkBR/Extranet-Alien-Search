@@ -38,7 +38,7 @@ const aliens = [
 
   {id: 1019, name: "EYE GUY", display: "Eye Guy", portrait: "Portraits/EYE GUY.png", availability: [1, 0, 1, 1, 0, 0, 0],body1:"ORGANIC",body2:"NONE",body3:"NONE",ele1:"ENERGY",ele2:"ELECTRIC", ele3:"ICE",ele4:"FIRE",stats:[40,25,50,30]},
 
-  {id: 1020, name: "WAY BIG", display: "Way Big", portrait: "Portraits/WAY BIG.png", availability: [1, 1, 1, 1, 0, 0, 0],body1:"ORGANIC",body2:"MECHANICAL",body3:"NONE",ele1:"ENERGY",ele2:"WIND", ele3:"NONE",ele4:"NONE",stats:[100,80,90,90]},
+  {id: 1020, name: "WAY BIG", display: "Way Big", portrait: "Portraits/WAY BIG.png", availability: [1, 1, 1, 1, 0, 1, 0],body1:"ORGANIC",body2:"MECHANICAL",body3:"NONE",ele1:"ENERGY",ele2:"WIND", ele3:"NONE",ele4:"NONE",stats:[100,80,90,90]},
 
   {id: 1021, name: "ARCTIGUANA", display: "Arctiguana", portrait: "Portraits/ARCTIGUANA.png", availability: [1, 0, 1, 1, 0, 0, 0],body1:"ORGANIC",body2:"NONE",body3:"NONE",ele1:"ICE",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[40,30,0,50]},
 
@@ -52,7 +52,7 @@ const aliens = [
 
   {id: 1026, name: "HUMUNGOUSAUR (FULL SIZE)", display: "Humungousaur (Full Size)", portrait: "Portraits/HUMUNGOUSAUR_FULL_SIZE.png", availability: [0, 1, 1, 1, 0, 1, 0],body1:"ORGANIC",body2:"NONE",body3:"NONE",ele1:"WIND",ele2:"NONE",ele3:"NONE",ele4:"NONE",stats:[80,70,40,40]},
 
-  {id: 1027, name: "JETRAY", display: "Jetray", portrait: "Portraits/JETRAY.png", availability: [0, 1, 1, 1, 0, 0, 0],body1:"ORGANIC",body2:"NONE",body3:"NONE",ele1:"ENERGY",ele2:"NONE",ele3:"NONE",ele4:"NONE",stats:[45,20,40,100]},
+  {id: 1027, name: "JETRAY", display: "Jetray", portrait: "Portraits/JETRAY.png", availability: [0, 1, 1, 1, 0, 1, 0],body1:"ORGANIC",body2:"NONE",body3:"NONE",ele1:"ENERGY",ele2:"NONE",ele3:"NONE",ele4:"NONE",stats:[45,20,40,100]},
 
   {id: 1028, name: "BIG CHILL", display: "Big Chill", portrait: "Portraits/BIG CHILL.png", availability: [0, 1, 1, 1, 0, 0, 0],body1:"ORGANIC",body2:"NONE",body3:"NONE",ele1:"ICE",ele2:"NONE",ele3:"NONE",ele4:"NONE",stats:[40,40,0,40]},
 
@@ -62,7 +62,7 @@ const aliens = [
 
   {id: 1031, name: "SPIDERMONKEY", display: "Spidermonkey", portrait: "Portraits/SPIDERMONKEY.png", availability: [0, 1, 1, 1, 0, 0, 0],body1:"ORGANIC",body2:"NONE",body3:"NONE",ele1:"NONE",ele2:"NONE",ele3:"NONE",ele4:"NONE",stats:[35,30,0,50]},
 
-  {id: 1032, name: "GOOP", display: "Goop", portrait: "Portraits/GOOP.png", availability: [0, 1, 1, 1, 0, 0, 0],body1:"POISON",body2:"MECHANICAL",body3:"NONE",ele1:"POISON",ele2:"NONE",ele3:"NONE",ele4:"NONE",stats:[80,30,50,60]},
+  {id: 1032, name: "GOOP", display: "Goop", portrait: "Portraits/GOOP.png", availability: [0, 1, 1, 1, 0, 1, 0],body1:"POISON",body2:"MECHANICAL",body3:"NONE",ele1:"POISON",ele2:"NONE",ele3:"NONE",ele4:"NONE",stats:[80,30,50,60]},
 
   {id: 1033, name: "ALIEN X", display: "Alien X", portrait: "Portraits/ALIEN X.png", availability: [0, 1, 1, 1, 0, 0, 0],body1:"COSMIC",body2:"NONE",body3:"NONE",ele1:"NONE",ele2:"NONE",ele3:"NONE",ele4:"NONE",stats:[999,0,0,0]},
 
@@ -194,27 +194,29 @@ const aliens = [
   
   {id: 1097, name: "SHOCK ROCK", display: "Shock Rock", portrait: "Portraits/SHOCKROCK.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"ELECTRIC",body2:"MINERAL",body3:"NONE",ele1:"ELECTRIC",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[70,80,50,20]},
 
-  {id: 1098, name: "(OMNI-ENHANCED) DIAMONDHEAD", display: "(Omni-Enhanced) Diamondhead", portrait: "Portraits/DIAMONDHEAD ENHANCED.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"MINERAL",body2:"ELECTRIC",body3:"NONE",ele1:"MINERAL",ele2:"ELECTRIC", ele3:"NONE",ele4:"NONE",stats:[70,70,50,50]},
+  {id: 1098, name: "(OMNI-ENHANCED) DIAMONDHEAD", display: "(Omni-Enhanced) Diamondhead", portrait: "Portraits/DIAMONDHEAD ENHANCED.png", availability: [0, 0, 0, 0, 0, 0, 1],body1:"MINERAL",body2:"ELECTRIC",body3:"NONE",ele1:"MINERAL",ele2:"ELECTRIC", ele3:"NONE",ele4:"NONE",stats:[70,70,50,50]},
 
-  {id: 1099, name: "(OMNI-ENHANCED) GREY MATTER", display: "(Omni-Enhanced) Grey Matter", portrait: "Portraits/GREY MATTER ENHANCED.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"MINERAL",body2:"ELECTRIC",body3:"ORGANIC",ele1:"ELECTRIC",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[40,40,20,20]},
+  {id: 1099, name: "(OMNI-ENHANCED) GREY MATTER", display: "(Omni-Enhanced) Grey Matter", portrait: "Portraits/GREY MATTER ENHANCED.png", availability: [0, 0, 0, 0, 0, 0, 1],body1:"MINERAL",body2:"ELECTRIC",body3:"ORGANIC",ele1:"ELECTRIC",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[40,40,20,20]},
 
-  {id: 1100, name: "(OMNI-ENHANCED) WILDVINE", display: "(Omni-Enhanced) Wildvine", portrait: "Portraits/WILDVINE ENHANCED.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"MINERAL",body2:"ELECTRIC",body3:"BOTANICAL",ele1:"ELECTRIC",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[60,55,40,20]},
+  {id: 1100, name: "(OMNI-ENHANCED) WILDVINE", display: "(Omni-Enhanced) Wildvine", portrait: "Portraits/WILDVINE ENHANCED.png", availability: [0, 0, 0, 0, 0, 0, 1],body1:"MINERAL",body2:"ELECTRIC",body3:"BOTANICAL",ele1:"ELECTRIC",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[60,55,40,20]},
 
-  {id: 1101, name: "(OMNI-ENHANCED) HEATBLAST", display: "(Omni-Enhanced) Heatblast", portrait: "Portraits/HEATBLAST ENHANCED.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"MINERAL",body2:"FIRE",body3:"ELECTRIC",ele1:"FIRE",ele2:"ELECTRIC", ele3:"NONE",ele4:"NONE",stats:[55,50,80,80]},
+  {id: 1101, name: "(OMNI-ENHANCED) HEATBLAST", display: "(Omni-Enhanced) Heatblast", portrait: "Portraits/HEATBLAST ENHANCED.png", availability: [0, 0, 0, 0, 0, 0, 1],body1:"MINERAL",body2:"FIRE",body3:"ELECTRIC",ele1:"FIRE",ele2:"ELECTRIC", ele3:"NONE",ele4:"NONE",stats:[55,50,80,80]},
 
-  {id: 1102, name: "(OMNI-ENHANCED) FOUR ARMS", display: "(Omni-Enhanced) Four Arms", portrait: "Portraits/FOUR ARMS ENHANCED.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"ORGANIC",body2:"MINERAL",body3:"ELECTRIC",ele1:"ELECTRIC",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[65,70,30,40]},
+  {id: 1102, name: "(OMNI-ENHANCED) FOUR ARMS", display: "(Omni-Enhanced) Four Arms", portrait: "Portraits/FOUR ARMS ENHANCED.png", availability: [0, 0, 0, 0, 0, 0, 1],body1:"ORGANIC",body2:"MINERAL",body3:"ELECTRIC",ele1:"ELECTRIC",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[65,70,30,40]},
 
-  {id: 1103, name: "(OMNI-ENHANCED) CANNONBOLT", display: "(Omni-Enhanced) Cannonbolt", portrait: "Portraits/CANNONBOLT ENHANCED.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"ORGANIC",body2:"MINERAL",body3:"ELECTRIC",ele1:"ELECTRIC",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[80,50,30,60]},
+  {id: 1103, name: "(OMNI-ENHANCED) CANNONBOLT", display: "(Omni-Enhanced) Cannonbolt", portrait: "Portraits/CANNONBOLT ENHANCED.png", availability: [0, 0, 0, 0, 0, 0, 1],body1:"ORGANIC",body2:"MINERAL",body3:"ELECTRIC",ele1:"ELECTRIC",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[80,50,30,60]},
 
-  {id: 1104, name: "(OMNI-ENHANCED) STINKFLY (REBOOT)", display: "(Omni-Enhanced) Stinkfly", portrait: "Portraits/STINKFLY REBOOT ENHANCED.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"ORGANIC",body2:"MINERAL",body3:"ELECTRIC",ele1:"ELECTRIC",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[50,35,30,60]},
+  {id: 1104, name: "(OMNI-ENHANCED) STINKFLY (REBOOT)", display: "(Omni-Enhanced) Stinkfly", portrait: "Portraits/STINKFLY REBOOT ENHANCED.png", availability: [0, 0, 0, 0, 0, 0, 1],body1:"ORGANIC",body2:"MINERAL",body3:"ELECTRIC",ele1:"ELECTRIC",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[50,35,30,60]},
 
-  {id: 1105, name: "(OMNI-ENHANCED) OVERFLOW", display: "(Omni-Enhanced) Overflow", portrait: "Portraits/OVERFLOW ENHANCED.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"WATER",body2:"ELECTRIC",body3:"MECHANICAL",body4:"MINERAL",ele1:"WATER",ele2:"ELECTRIC", ele3:"ICE",ele4:"WIND",stats:[55,50,60,60]},
+  {id: 1105, name: "(OMNI-ENHANCED) OVERFLOW", display: "(Omni-Enhanced) Overflow", portrait: "Portraits/OVERFLOW ENHANCED.png", availability: [0, 0, 0, 0, 0, 0, 1],body1:"WATER",body2:"ELECTRIC",body3:"MECHANICAL",body4:"MINERAL",ele1:"WATER",ele2:"ELECTRIC", ele3:"ICE",ele4:"WIND",stats:[55,50,60,60]},
 
-  {id: 1106, name: "(OMNI-ENHANCED) XLR8", display: "(Omni-Enhanced) XLR8", portrait: "Portraits/XLR8 ENHANCED.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"MINERAL",body2:"ELECTRIC",body3:"ORGANIC",ele1:"ELECTRIC",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[55,50,20,90]},
+  {id: 1106, name: "(OMNI-ENHANCED) XLR8", display: "(Omni-Enhanced) XLR8", portrait: "Portraits/XLR8 ENHANCED.png", availability: [0, 0, 0, 0, 0, 0, 1],body1:"MINERAL",body2:"ELECTRIC",body3:"ORGANIC",ele1:"ELECTRIC",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[55,50,20,90]},
 
   {id: 1107, name: "XLRARMSBLASTDIAMONDHEAT", display: "XLRArmBlastDiamondHeat", portrait: "Portraits/XLRArmBlastDiamondHeat.png", availability: [0, 0, 0, 0, 0, 0, 0],body1:"ORGANIC",body2:"MINERAL",body3:"FIRE",ele1:"MINERAL",ele2:"FIRE", ele3:"WIND",ele4:"NONE",stats:[70,70,80,80]},
 
-  {id: 1108, name: "SLAPBACK", display: "Slapback", portrait: "Portraits/SLAPBACK.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"MECHANICAL",body2:"NONE",body3:"NONE",ele1:"NONE",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[50,25,0,20]}
+  {id: 1108, name: "SLAPBACK", display: "Slapback", portrait: "Portraits/SLAPBACK.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"MECHANICAL",body2:"NONE",body3:"NONE",ele1:"NONE",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[50,25,0,20]},
+
+  {id: 9999, name: "SURGE", display: "Surge", portrait: "Portraits/SURGE.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"MECHANICAL",body2:"NONE",body3:"NONE",ele1:"ENERGY",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[60,30,50,50]}
 
 
 

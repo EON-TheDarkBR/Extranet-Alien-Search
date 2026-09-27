@@ -211,13 +211,14 @@ function searchAlien() {
       "icons/UA_WATCH.png",
       "icons/OV_WATCH.png",
       "icons/BIO_WATCH.png",
-      "icons/RB_WATCH.png"
+      "icons/RB_WATCH.png",
+      "icons/SR_WATCH.png"
 
     ];
 
 
     // Cria os Omnitrix
-    for (let j = 0; j < 6; j++) {
+    for (let j = 0; j < 7; j++) {
 
       let icon =
         document.createElement("img");

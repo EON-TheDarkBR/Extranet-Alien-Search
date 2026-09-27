@@ -17,7 +17,9 @@ const playlists = [
   "Ultimatrix",
   "Definitive",
   "Biomnitrix",
-  "Reboot"
+  "Reboot",
+  "Omni-Enhanced",
+  "Ultimate"
 ];
 
 
@@ -39,6 +41,22 @@ function alienBelongsToPlaylist(alien, selectedPlaylists) {
   // Alien pertence a pelo menos uma
   // das playlists selecionadas
   return selectedPlaylists.some(function(index) {
+
+
+    // ==========================================
+    // ULTIMATE
+    // ==========================================
+
+    if (index === 7) {
+
+      return alien.name.includes("ULTIMATE");
+
+    }
+
+
+    // ==========================================
+    // PLAYLISTS NORMAIS
+    // ==========================================
 
     return alien.availability[index] === 1;
 
@@ -239,7 +257,6 @@ function createPlaylistMenu() {
 
         // NÃO FECHA O MENU
         // para permitir selecionar várias
-
 
         searchAlien();
 
