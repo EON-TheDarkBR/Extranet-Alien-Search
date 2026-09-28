@@ -216,7 +216,28 @@ const aliens = [
 
   {id: 1108, name: "SLAPBACK", display: "Slapback", portrait: "Portraits/SLAPBACK.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"MECHANICAL",body2:"NONE",body3:"NONE",ele1:"NONE",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[50,25,0,20]},
 
-  {id: 9999, name: "SURGE", display: "Surge", portrait: "Portraits/SURGE.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"MECHANICAL",body2:"NONE",body3:"NONE",ele1:"ENERGY",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[60,30,50,50]}
+  {id: 1109, name: "SURGE", display: "Surge", portrait: "Portraits/SURGE.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"MECHANICAL",body2:"NONE",body3:"NONE",ele1:"ENERGY",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[60,30,50,50]},
+
+  {id: 1110, name: "(OMNI-KIX) FOUR ARMS", display: "(Omni-Kix) Four Arms", portrait: "Portraits/OMNIKIX FOUR ARMS.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"ORGANIC",body2:"MECHANICAL",body3:"ENERGY",ele1:"NONE",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[80,60,30,60]}, 
+
+  {id: 1111, name: "(OMNI-KIX) XLR8", display: "(Omni-Kix) XLR8", portrait: "Portraits/OMNIKIX XLR8.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"ORGANIC",body2:"MECHANICAL",body3:"ENERGY",ele1:"ENERGY",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[80,60,0,85]},
+
+  {id: 1112, name: "(OMNI-KIX) RATH", display: "(Omni-Kix) Rath", portrait: "Portraits/OMNIKIX RATH.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"ORGANIC",body2:"MECHANICAL",body3:"ENERGY",ele1:"NONE",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[80,50,0,40]},
+
+  {id: 1113, name: "(OMNI-KIX) CANNONBOLT", display: "(Omni-Kix) Cannonbolt", portrait: "Portraits/OMNIKIX CANNONBOLT.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"ORGANIC",body2:"MECHANICAL",body3:"ENERGY",ele1:"NONE",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[90,50,0,60]},
+
+  {id: 1114, name: "(OMNI-KIX) DIAMONDHEAD", display: "(Omni-Kix) Diamondhead", portrait: "Portraits/OMNIKIX DIAMONDHEAD.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"MINERAL",body2:"MECHANICAL",body3:"ENERGY",ele1:"MINERAL",ele2:"ENERGY", ele3:"NONE",ele4:"NONE",stats:[80,70,30,50]},
+
+  {id: 1115, name: "(OMNI-KIX) SLAPBACK", display: "(Omni-Kix) Slapback", portrait: "Portraits/OMNIKIX SLAPBACK.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"MECHANICAL",body2:"ENERGY",body3:"NONE",ele1:"ENERGY",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[80,25,30,20]},
+
+  {id: 1116, name: "(OMNI-NAUT) JETRAY", display: "(Omni-Naut) Jetray", portrait: "Portraits/OMNINAUT JETRAY.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"ORGANIC",body2:"MECHANICAL",body3:"ENERGY",ele1:"ENERGY",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[80,60,40,100]},
+
+  {id: 1117, name: "(OMNI-NAUT) HUMUNGOUSAUR", display: "(Omni-Naut) Humungousaur", portrait: "Portraits/OMNINAUT HUMUNGOUSAUR.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"ORGANIC",body2:"MECHANICAL",body3:"ENERGY",ele1:"SOUND",ele2:"ENERGY", ele3:"NONE",ele4:"NONE",stats:[80,50,50,60]},
+
+  {id: 1118, name: "(OMNI-NAUT) HEATBLAST", display: "(Omni-Naut) Heatblast", portrait: "Portraits/OMNINAUT HEATBLAST.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"MINERAL",body2:"FIRE",body3:"MECHANICAL",body4:"ENERGY",ele1:"FIRE",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[80,50,80,60]},
+
+  {id: 1119, name: "(OMNI-NAUT) SHOCK ROCK", display: "(Omni-Naut) Shock Rock", portrait: "Portraits/OMNINAUT SHOCK ROCK.png", availability: [0, 0, 0, 0, 0, 1, 0],body1:"ELECTRIC",body2:"MINERAL",body3:"MECHANICAL",body4:"ENERGY",ele1:"ELECTRIC",ele2:"NONE", ele3:"NONE",ele4:"NONE",stats:[80,80,60,60]}
+
 
 
 
